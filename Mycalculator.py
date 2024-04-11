@@ -29,7 +29,7 @@ def clear():
 
 if __name__ == "__main__":
     gui = tk.Tk()
-    gui.configure(background="black")  # Set the background color of the GUI window
+    # gui.configure(background="black")  # Set the background color of the GUI window
     gui.geometry("300x275")  # Set the size of the GUI window
     gui.title("Simple calculator")  # Set the title of the GUI window
 
@@ -70,25 +70,25 @@ if __name__ == "__main__":
     btn0.grid(row=6, column=2)
 
     # Buttons for symbols
-    btnDivide= tk.Button(gui, text="/", command=lambda: add("/"), width=5, font=("Arial", 14))
+    btnDivide= tk.Button(gui, text="/", command=lambda: add("/"), width=5, font=("Arial", 14), bg="#00f00c")
     btnDivide.grid(row=2, column=4)
 
-    btnMultiply = tk.Button(gui, text="x", command=lambda: add("*"), width=5, font=("Arial", 14))
+    btnMultiply = tk.Button(gui, text="x", command=lambda: add("*"), width=5, font=("Arial", 14),bg="#00f00c")
     btnMultiply.grid(row=3, column=4)
 
-    btnMinus = tk.Button(gui, text="-", command=lambda: add("-"), width=5, font=("Arial", 14))
+    btnMinus = tk.Button(gui, text="-", command=lambda: add("-"), width=5, font=("Arial", 14), bg="#00f00c")
     btnMinus.grid(row=4, column=4)
 
-    btnAdd = tk.Button(gui, text="+", command=lambda: add("+"), width=5, font=("Arial", 14))
+    btnAdd = tk.Button(gui, text="+", command=lambda: add("+"), width=5, font=("Arial", 14), bg="#00f00c")
     btnAdd.grid(row=5, column=4)
 
-    btnClear = tk.Button(gui, text="C", command=clear, width=5, font=("Arial", 14))
+    btnClear = tk.Button(gui, text="C", command=clear, width=5, font=("Arial", 14),bg="#00f00c")
     btnClear.grid(row=2, column=1)
 
-    btnDelete = tk.Button(gui, text="Del", command=lambda: textResult.delete("end-2c", "end-1c"), width=5, font=("Arial", 14))
+    btnDelete = tk.Button(gui, text="Del", command=lambda: textResult.delete("end-2c", "end-1c"), width=5, font=("Arial", 14),bg="#00f00c")
     btnDelete.grid(row=2, column=2)
 
-    btnPercentage = tk.Button(gui, text="%", command=lambda: add("%"), width=5, font=("Arial", 14))
+    btnPercentage = tk.Button(gui, text="%", command=lambda: add("%"), width=5, font=("Arial", 14),bg="#00f00c")
     btnPercentage.grid(row=2, column=3)
 
     btnOpenParenthesis = tk.Button(gui, text="(", command=lambda: add("("), width=5, font=("Arial", 14))
@@ -98,7 +98,7 @@ if __name__ == "__main__":
     btnCloseParenthesis = tk.Button(gui, text=")", command=lambda: add(")"), width=5, font=("Arial", 14))
     btnCloseParenthesis.grid(row=6, column=3)
 
-    btnEqual = tk.Button(gui, text="=", command=evaluate, width=5, font=("Arial", 14))
+    btnEqual = tk.Button(gui, text="=", command=evaluate, width=5, font=("Arial", 14),bg="#00f00c")
     btnEqual.grid(row=6, column=4)
 
     gui.mainloop()
